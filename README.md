@@ -190,7 +190,7 @@ cp -r /arc-arch-linux-installation-guide .
 cd /arc-arch-linux-installation-guide
 
 # give exec permissions to script
-chmod +x sway.sh
+chmod +x gnome.sh
 
 # go back to home directory
 cd ..
@@ -200,7 +200,7 @@ cd ..
 12. Configure ZRAM (used for SWAP)
 
 ```bash
-paru -S zramd
+yay -S zramd
 sudo systemctl enable --now zramd.service
 
 # check the block devices table

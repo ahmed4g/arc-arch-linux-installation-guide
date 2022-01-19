@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set system time
-ln -sf /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+ln -sf /usr/share/zoneinfo/Asia/Qatar /etc/localtime
 hwclock --systohc
 sed -i '177s/.//' /etc/locale.gen
 locale-gen
@@ -40,7 +40,7 @@ pacman -S xdg-user-dirs xdg-utils
 # pacman -S nfs-utils inetutils dnsutils openbsd-netcat iptables-nft ipset nss-mdns avahi
 
 # install bluetooth protocol stack packages
-pacman -S bluez bluez-utils
+# pacman -S bluez bluez-utils
 
 # install support packages & drivers for printers
 # pacman -S cups hplip

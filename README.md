@@ -99,6 +99,8 @@ btrfs subvolume create @
 btrfs subvolume create @home
 # make btrFS subvolume for var subvolume
 btrfs subvolume create @var
+# make btrFS subvolume for snapshots subvolume
+btrfs subvolume create @snapshots
 
 cd
 # unmount main partition - root subvolume
@@ -109,12 +111,14 @@ mount -o noatime, compress=zstd, space_cache,discard=async,subvol=@ /dev/***2 /m
 
 # directories var, home & var
 mkdir -p /mnt/boot/efi
-mkdir /mnt/{home,var}
+mkdir /mnt/{home,var,.snapshots}
 
-# mount home & var subvolumes
+# mount home , var & snapshots subvolumes
 mount -o noatime, compress=zstd, space_cache,discard=async,subvol=@home /dev/***2 /mnt/home
 
 mount -o noatime, compress=zstd, space_cache,discard=async,subvol=@var /dev/***2 /mnt/var
+
+mount -o noatime, compress=zstd, space_cache,discard=async,subvol=@snapshots /dev/***2 /mnt/snapshots
 ```
 
 4. Mount EFI partition

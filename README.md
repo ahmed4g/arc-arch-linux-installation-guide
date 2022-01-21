@@ -155,7 +155,7 @@ cat /etc/fstab
 
 ```bash
 # give exec permissions to script
-git clone https://github.com/arcbjorn/arc-arch-linux-installation-guide
+git clone https://github.com/ahmed4g/arc-arch-linux-installation-guide.git
 cd arc-arch-linux-installation-guide
 # don't forget to change username & password to yours :)
 chmod +x base.sh

@@ -21,7 +21,7 @@ makepkg -si --noconfirm
 #cd paru/
 #makepkg -si --noconfirm
 
-sudo pacman -S  gdm gnome gnome-extra figlet packagekit flatpak wget gnome-tweak-tools gnome-shell-extensions chrome-gnome-shell arc-gtk-theme arc-icon-theme
+sudo pacman -S  gdm gnome gnome-extra figlet packagekit flatpak wget gnome-tweak gnome-shell-extensions  arc-gtk-theme arc-icon-theme firefox
 
 git clone https://aur.archlinux.org/all-repository-fonts.git
 cd all-repository-fonts/
